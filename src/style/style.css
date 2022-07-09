@@ -1,0 +1,245 @@
+body{
+  margin: 0;
+}
+.navbar {
+    background-color:  #E55151;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    max-width: 1500px;
+  }
+  
+  .nav-logo {
+    color: white;
+    align-items: center;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    flex-grow: 1;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    margin-right: 2rem;
+  }
+  
+  .nav-links {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    border-bottom: 3px solid transparent;
+  }
+  .fa-code {
+    margin-left: 1rem;
+  }
+  
+  .nav-item {
+    line-height: 40px;
+    margin-right: 1rem;
+  }
+  
+  .nav-item:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width 0.7s ease, background-color 0.5s ease;
+  }
+  
+  .nav-item:hover:after {
+    width: 100%;
+    background: white;
+  }
+  
+  .nav-item .active {
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .nav-icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-top: 1pxsolid #E55151;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+  
+    .nav-menu.active {
+      background: #E55151;
+      left: 0px;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+    }
+    .nav-item .active {
+      color: white;
+      border: none;
+    }
+    .nav-links {
+      padding: 1.5rem;
+      width: 100%;
+      display: table;
+    }
+  
+    .nav-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+    }
+  }
+
+/* INCIO */
+.titulo{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  color:  #E55151;
+}
+.anuncios {
+  background-color: #E50000;
+  width: 100%;
+  height: 500px;
+}
+.opciones{
+  display: flex;
+  justify-content: center;
+}
+.opcion-button{
+  height: 30px;
+  width: 100%;
+  background-color: white;
+  color: black;
+  border: 1px #D0D3D4 solid;
+  
+}
+.opcion-button:active{
+  height: 30px;
+  width: 100%;
+  background-color: #E50000;
+  color: white;
+  border: none;
+}
+.opcion-button:focus{
+  height: 30px;
+  width: 100%;
+  background-color: #E50000;
+  color: white;
+  border: none;
+}
+.container-producto{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  /* border: 2px black solid; */
+ 
+}
+.container-producto:hover .container-box{
+  /* display: flex; */
+  /* justify-content: center; */
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+  transition: all 300ms ;
+  border-radius: 5px;
+  box-shadow:  0px 0px 6px 6px rgba(0,0,0,0.2);;
+}
+.descuento{
+  text-decoration: line-through
+}
+.container-card-imagen{
+  position: relative;
+}
+.etiqueta-nuevo-descuento{
+  position: absolute;
+  margin-top: 0;
+  top: 10px;
+  border: 2px solid red;
+  color: red;
+  
+}
+.etiqueta-favoritos{
+  position: absolute;
+  justify-content: end;
+  right: 5px;
+  top: 10px;
+}
+.container-card-descripcion{
+  border-top: 2px #D0D3D4 solid
+}
+.container-card-descripcion h3{
+  margin: 10px 0 0 0;
+}
+.container-card-descripcion h5{
+  margin: 10px 0 0 0;
+  color: #B2BABB;
+}
+.talla{
+  position: absolute;
+  z-index: -1;
+}
+.talla h3 , h4{
+  text-align: center;
+  margin:  2px 2px 8px 2px;
+}
+.container-producto:hover .talla{
+  position: relative;
+  z-index: 1;
+}
+.contenedor-boton{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+  transition: all 500ms cubic-bezier(0.5,5,0,5);
+}
+.container-producto:hover .contenedor-boton{
+  position: relative;
+  margin-top: 20px;
+  z-index: 1;
+}
+.boton-agregar{
+  background-color: white;
+  border: 1px black solid;
+  border-radius: 5px;
+  height: 30px;
+}
+.boton-agregar:active{
+  background-color: #E50000;
+  color: white;
+  border: 1px  ;
+  border-radius: 5px;
+  height: 30px;
+}
+
